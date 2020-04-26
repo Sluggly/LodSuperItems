@@ -53,70 +53,56 @@ var pageActive = 1; // Indique la page active (1=Axe)
 var selected = []; // Liste des item sélectionné
 var itemDict = [];
 
-// Boutons
-var bouton_Ofthesae = document.getElementById('Bouton-Ofthesae');
-var bouton_Staffofnegation = document.getElementById('Bouton-Staffofnegation');
-var bouton_Aerialstrike = document.getElementById('Bouton-Aerialstrike');
-var bouton_Arcanesword = document.getElementById('Bouton-Arcanesword');
-var bouton_Angelice = document.getElementById('Bouton-Angelice');
-var bouton_Godarmor = document.getElementById('Bouton-Godarmor');
-var bouton_Starrofhealth = document.getElementById('Bouton-Starrofhealth');
-var bouton_Arcaneshield = document.getElementById('Bouton-Arcaneshield');
-var bouton_Spidersik = document.getElementById('Bouton-Spidersik');
-var bouton_Wandofneutralization = document.getElementById('Bouton-Wandofneutralization');
-var bouton_Meladilion = document.getElementById('Bouton-Meladilion');
-var bouton_Keyofthemoon = document.getElementById('Bouton-Keyofthemoon');
-var bouton_Mightyaxe = document.getElementById('Bouton-Mightyaxe');
-var bouton_Offensivestrike = document.getElementById('Bouton-Offensivestrike');
-var bouton_Infernalfist = document.getElementById('Bouton-Infernalfist');
-var bouton_Holywarfare = document.getElementById('Bouton-Holywarfare');
-var bouton_Godshield = document.getElementById('Bouton-Godshield');
-var bouton_Defensivestrike = document.getElementById('Bouton-Defensivestrike');
-var bouton_Dimensionalshield = document.getElementById('Bouton-Dimensionalshield');
-var bouton_Guardianforce = document.getElementById('Bouton-Guardianforce');
-var bouton2Spidersik = document.getElementById('Bouton2Spidersik');
-var bouton2Wandofneutralization = document.getElementById('Bouton2Wandofneutralization');
-var bouton2Meladilion = document.getElementById('Bouton2Meladilion');
-var bouton2Keyofthemoon = document.getElementById('Bouton2Keyofthemoon');
-var bouton_Dragonitem = document.getElementById('Bouton-Dragonitem');
-var bouton_Superitem = document.getElementById('Bouton-Superitem');
-
 // Objets
-var Ofthesae = createItem(bouton_Ofthesae, 100);
-var Staffofnegation = createItem(bouton_Staffofnegation, 80);
-var Aerialstrike = createItem(bouton_Aerialstrike, 75);
-var Arcanesword = createItem(bouton_Arcanesword, 50);
-var Angelice = createItem(bouton_Angelice, 20);
-var Godarmor = createItem(bouton_Godarmor, 95);
-var Starrofhealth = createItem(bouton_Starrofhealth, 100);
-var Arcaneshield = createItem(bouton_Arcaneshield, 50);
-var Spidersik = createItem(bouton_Spidersik, 90);
-var Wandofneutralization = createItem(bouton_Wandofneutralization, 85);
-var Meladilion = createItem(bouton_Meladilion, 70);
-var Keyofthemoon = createItem(bouton_Keyofthemoon, 50);
-var Mightyaxe = createItem(bouton_Mightyaxe, 40);
-var Offensivestrike = createItem(bouton_Offensivestrike, 75);
-var Infernalfist = createItem(bouton_Infernalfist, 90);
-var Holywarfare = createItem(bouton_Holywarfare, 50);
-var Godshield = createItem(bouton_Godshield, 80);
-var Defensivestrike = createItem(bouton_Defensivestrike, 75);
-var Dimensionalshield = createItem(bouton_Dimensionalshield, 40);
-var Guardianforce = createItem(bouton_Guardianforce, 50);
-var Spidersik2 = createItem(bouton2Spidersik, 90);
-var Wandofneutralization2 = createItem(bouton2Wandofneutralization, 85);
-var Meladilion2 = createItem(bouton2Meladilion, 70);
-var Keyofthemoon2 = createItem(bouton2Keyofthemoon, 50);
-var Dragonitem = createItem(bouton_Dragonitem, 100);
-var Superitem = createItem(bouton_Superitem, 100);
-
-// Fonction qui créer les objets
-function createItem(bouton, prix) {
-	var srcOff = bouton.src;
-	var src = srcOff.slice(0, -8) + '.png';
-	var item = new Item(bouton, src, srcOff, prix);
-	itemDict[bouton.id] = item;
-	return item;
-}
+var Ofthesae = createItem('Bouton-Ofthesae', 100);
+var Staffofnegation = createItem('Bouton-Staffofnegation', 80);
+var Aerialstrike = createItem('Bouton-Aerialstrike', 75);
+var Arcanesword = createItem('Bouton-Arcanesword', 50);
+var Angelice = createItem('Bouton-Angelice', 20);
+var Godarmor = createItem('Bouton-Godarmor', 95);
+var Starrofhealth = createItem('Bouton-Starrofhealth', 100);
+var Arcaneshield = createItem('Bouton-Arcaneshield', 50);
+var Spidersik = createItem('Bouton-Spidersik', 90);
+var Wandofneutralization = createItem('Bouton-Wandofneutralization', 85);
+var Meladilion = createItem('Bouton-Meladilion', 70);
+var Keyofthemoon = createItem('Bouton-Keyofthemoon', 50);
+var Mightyaxe = createItem('Bouton-Mightyaxe', 40);
+var Offensivestrike = createItem('Bouton-Offensivestrike', 75);
+var Infernalfist = createItem('Bouton-Infernalfist', 90);
+var Holywarfare = createItem('Bouton-Holywarfare', 50);
+var Godshield = createItem('Bouton-Godshield', 80);
+var Defensivestrike = createItem('Bouton-Defensivestrike', 75);
+var Dimensionalshield = createItem('Bouton-Dimensionalshield', 40);
+var Guardianforce = createItem('Bouton-Guardianforce', 50);
+var Spidersik2 = createItem('Bouton-2Spidersik', 90);
+var Wandofneutralization2 = createItem('Bouton-2Wandofneutralization', 85);
+var Meladilion2 = createItem('Bouton-2Meladilion', 70);
+var Keyofthemoon2 = createItem('Bouton-2Keyofthemoon', 50);
+var Dragonitem = createItem('Bouton-Dragonitem', 100);
+var Superitem = createItem('Bouton-Superitem', 100);
+var Sunitem = createItem('Bouton-Sunitem', 100);
+var Arcanitemelee = createItem('Bouton-Arcanitemelee', 85);
+var Scepterofmastery = createItem('Bouton-Scepterofmastery', 90);
+var Staffofsanctuary = createItem('Bouton-Staffofsanctuary', 80);
+var Holysword = createItem('Bouton-Holysword', 50);
+var Arcanitemelee2 = createItem('Bouton-2Arcanitemelee', 85);
+var Scepterofmastery2 = createItem('Bouton-2Scepterofmastery', 90);
+var Staffofsanctuary2 = createItem('Bouton-2Staffofsanctuary', 80);
+var Shadowbringer = createItem('Bouton-Shadowbringer', 50);
+var Timesabres = createItem('Bouton-Timesabres', 100);
+var Angelice2 = createItem('Bouton-2Angelice', 20);
+var Godarmor2 = createItem('Bouton-2Godarmor', 95);
+var Starrofhealth2 = createItem('Bouton-2Starrofhealth', 100);
+var Arcaneshield2 = createItem('Bouton-2Arcaneshield', 50);
+var Godshield2 = createItem('Bouton-2Godshield', 80);
+var Defensivestrike2 = createItem('Bouton-2Defensivestrike', 75);
+var Dimensionalshield2 = createItem('Bouton-2Dimensionalshield', 40);
+var Guardianforce2 = createItem('Bouton-2Guardianforce', 50);
+var Soularmor = createItem('Bouton-Soularmor', 50);
+var Hammerofhealth = createItem('Bouton-Hammerofhealth', 100);
+var Mysticalstrike = createItem('Bouton-Mysticalstrike', 65);
+var Wand = createItem('Bouton-Wand', 50);
+var Holyprotection = createItem('Bouton-Holyprotection', 100);
 
 // Dépendences Objets
 Arcanesword.add_child([Ofthesae, Staffofnegation, Aerialstrike]);
@@ -127,6 +113,25 @@ Guardianforce.add_child([Godshield, Defensivestrike, Dimensionalshield]);
 Keyofthemoon2.add_child([Spidersik2, Wandofneutralization2, Meladilion2]);
 Dragonitem.add_child([Arcanesword, Arcaneshield, Keyofthemoon]);
 Superitem.add_child([Holywarfare, Guardianforce, Keyofthemoon2]);
+Sunitem.add_child([Dragonitem, Superitem]);
+Holysword.add_child([Arcanitemelee, Scepterofmastery, Staffofsanctuary]);
+Shadowbringer.add_child([Arcanitemelee2, Scepterofmastery2, Staffofsanctuary2]);
+Timesabres.add_child([Holysword, Shadowbringer]);
+Arcaneshield2.add_child([Angelice2, Godarmor2, Starrofhealth2]);
+Guardianforce2.add_child([Godshield2, Defensivestrike2, Dimensionalshield2]);
+Soularmor.add_child([Arcaneshield2, Guardianforce2]);
+Wand.add_child([Hammerofhealth, Mysticalstrike]);
+Holyprotection.add_child([Timesabres, Soularmor, Wand]);
+
+// Fonction qui créer les objets
+function createItem(boutonName, prix) {
+	var bouton = document.getElementById(boutonName);
+	var srcOff = bouton.src;
+	var src = srcOff.slice(0, -8) + '.png';
+	var item = new Item(bouton, src, srcOff, prix);
+	itemDict[bouton.id] = item;
+	return item;
+}
 
 // Fonction Refresh Prix
 function refreshPrix() {
@@ -177,7 +182,6 @@ function clickedItem(item, click) {
 			i++;
 		}
 	}
-	console.log(selected);
 	refreshPrix();
 }
 
